@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Reset de los bloques y se ajusta globalmente la fuente Open Sans */
 *{
     padding: 0;
     margin: 0;
@@ -7,6 +9,7 @@
 }
 
 
+/* Se ajusta el tamaño de los iconos y el color de fondo */
 .main-section i{
     background-color: #0dcaf0;
     width: 100%;
@@ -33,3 +36,12 @@ footer{
 footer i{
     font-size: 30px;
 }
+
+
+/* Media query para ajustar las card cuando se usa la version mobile */
+@media (max-width: 575.98px) { 
+
+    .card-destacados .col-sm-12{
+        margin-bottom: 10px;
+    }
+ }
