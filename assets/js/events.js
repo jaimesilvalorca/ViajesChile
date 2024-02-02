@@ -15,6 +15,7 @@ $(document).ready(function(){
       }
     });
 
+    //boton enviar datos
     $('#enviarContacto').click(function(){
         alert("Datos enviados!!"  )
     })
