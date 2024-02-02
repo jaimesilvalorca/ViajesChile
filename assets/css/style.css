@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.main-section i{
+    background-color: #0dcaf0;
+    width: 100%;
+    font-size: 30px;
+}
+
+.card-body{
+    background-color: #0dcaf0;
+    color: white;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+footer{
+    background-color: #0dcaf0;
+    color: white;
+    height: auto;
+    
+}
+
+footer i{
+    font-size: 30px;
+}
