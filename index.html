@@ -8,7 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/img/viajes.svg" type="image/x-icon">
     <script src="https://kit.fontawesome.com/0d6044bda3.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/jquery-3.7.1.js"></script>
+    
 </head>
 
 <body>
@@ -26,16 +29,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="">Inicio</a>
+                            <a class="nav-link" aria-current="page" href="#inicio">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Quienes Somos</a>
+                            <a class="nav-link" href="#quienessomos">Quienes Somos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Destacados</a>
+                            <a class="nav-link" href="#destacados">Destacados</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Contacto</a>
+                            <a class="nav-link" href="#contacto">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -44,8 +47,8 @@
 
         <!-- Carousel de boostrap con indicadores de pagina del carousel y flechas para cambiar  -->
 
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
+        <div id="carouselExampleIndicators" class="carousel slide" >
+            <div class="carousel-indicators" id="inicio">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
@@ -78,7 +81,7 @@
 
     </header>
     <main class="main-section mt-5">
-        <section>
+        <section class="d-none d-sm-block " id="quienessomos">
             <div class="container">
                 <h1 class="fs-3 text-center mb-5">QUIÉNES SOMOS</h1>
                 <hr>
@@ -86,7 +89,7 @@
 
                     <!-- Los i son de fontawesome  -->
 
-                    <div class="col-sm-12 col-md-4 text-center">
+                    <div class=" col-md-4 col-sm-12 text-center">
                         <i class="fa-solid fa-plane"></i>
                         <p class="text-start">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, animi.
                             Ea nihil, animi,
@@ -108,7 +111,7 @@
                             facere modi
                             consequuntur?</p>
                     </div>
-                    <div class=" col-sm-12 col-md-4 text-center">
+                    <div class=" col-md-4 col-sm-12  text-center">
 
                         <p class="text-start">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, animi.
                             Ea nihil, animi,
@@ -131,7 +134,7 @@
                             consequuntur?</p>
                         <i class="fa-solid fa-mountain"></i>
                     </div>
-                    <div class="col-sm-12 col-md-4 text-center">
+                    <div class=" col-md-4 col-sm-12 text-center">
                         <i class="fa-solid fa-route"></i>
                         <p class="text-start">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, animi.
                             Ea nihil, animi,
@@ -157,15 +160,15 @@
             </div>
         </section>
 
-        <section>
+        <section class="card-destacados" id="destacados">
             <div class="container">
                 <h2 class=" fs-3 text-center mt-5 mb-5">DESTACADOS</h2>
                 <hr>
-                <div class="row">
+                <div class="row gap-">
 
                     <!-- sistema de grillas de boostrap y card de boostrap -->
 
-                    <div class=" col-md-3 col-sm-12 ">
+                    <div class="col-md-3 col-sm-12 ">
                         <div class="card" style="width: 18rem;">
                             <img src="./assets/img/card1.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -195,7 +198,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-3">
+                    <div class=" col-md-3 col-sm-12">
                         <div class="card" style="width: 18rem;">
                             <img src="./assets/img/card4.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -209,8 +212,8 @@
             </div>
         </section>
         
-        <section>
-            <div class="container">
+        <section id="contacto">
+            <div class="container" >
                 <h1 class="fs-3 text-center mt-5 mb-5">CONTACTO</h1>
                 <hr>
                 <form>
@@ -228,7 +231,7 @@
                     </div>
 
                     <div class="my-3 text-start pb-3">
-                        <button class="btn btn-info text-light">Enviar</button>
+                        <button id="enviarContacto" class="btn btn-info text-light" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Enviar formulario">Enviar</button>
                     </div>
                 </form>
             </div>
@@ -255,6 +258,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="./assets/js/events.js"></script>
+    <script src="./assets/js/tooltip.js"></script>
 </body>
 
 </html>
